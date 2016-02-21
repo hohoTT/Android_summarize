@@ -5,5 +5,4 @@ INDEX VERSION 1.126+F:\Android_summarize\.metadata\.plugins\org.eclipse.jdt.core
 1284074322.index
 162666637.index
 3071915715.index
-3099558869.index
 3619169236.index
