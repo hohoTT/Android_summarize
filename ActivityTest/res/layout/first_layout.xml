@@ -11,10 +11,22 @@
         android:text="Button 1" />
     
     <Button
-        android:id="@+id/button_start_SecondActivity"
+        android:id="@+id/button_explicit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="start_SecondActivity" />
+        android:text="explicit_start_SecondActivity" />
+    
+    <Button
+        android:id="@+id/button_implicit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="implicit_start_SecondActivity" />
+    
+    <Button
+        android:id="@+id/button_baidu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="百度一下" />
 
     <Button
         android:id="@+id/button_finish"

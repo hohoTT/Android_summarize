@@ -25,6 +25,11 @@
         <activity
             android:name=".SecondActivity"
             android:label="This is SecondActivity" >
+            <intent-filter>
+                <action android:name="com.wt.activitytest.ACTION_START" />
+                <category android:name="android.intent.category.DEFAULT" />
+            	<category android:name="com.wt.activitytest.MY_CATEGORY" />
+            </intent-filter>
         </activity>
     </application>
 
