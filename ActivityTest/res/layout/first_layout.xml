@@ -9,5 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button 1" />
+    
+    <Button
+        android:id="@+id/button_start_SecondActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start_SecondActivity" />
+
+    <Button
+        android:id="@+id/button_finish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="finish" />
 
 </LinearLayout>
