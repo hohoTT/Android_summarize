@@ -9,5 +9,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button 2" />
+    
+    <Button
+        android:id="@+id/button_tel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="打电话" />
+    
+    <Button
+        android:id="@+id/button_back_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="back_first_activity" />
 
 </LinearLayout>

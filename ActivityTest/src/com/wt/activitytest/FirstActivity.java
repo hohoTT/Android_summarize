@@ -85,7 +85,7 @@ public class FirstActivity extends Activity {
 				Intent intent = new Intent(Intent.ACTION_VIEW);
 				
 				// 通过 Uri.parse() 方法将一个网址字符串解析成一个Uri对象
-				intent.setData(Uri.parse("https://www.baidu.com"));
+				intent.setData(Uri.parse("http://www.baidu.com"));
 				
 				startActivity(intent);
 			}
