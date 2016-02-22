@@ -27,6 +27,18 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="百度一下" />
+    
+    <Button
+        android:id="@+id/button_pass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pass_data" />
+    
+    <Button
+        android:id="@+id/button_for_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="for_result_second" />
 
     <Button
         android:id="@+id/button_finish"

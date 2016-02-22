@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -91,6 +92,44 @@ public class FirstActivity extends Activity {
 			}
 		});
 		
+		// 向下一个活动传递数据
+//		Button button_pass = (Button) findViewById(R.id.button_pass);
+//		
+//		button_pass.setOnClickListener(new OnClickListener() {
+//			
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//
+//				String data = "Hello SecondActivity";
+//				Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+//				// 第一个参数为键（即：extra_data），用于后面从Intent中取值
+//				// 第二个参数才是真正要传递的数据（即：data）
+//				intent.putExtra("extra_data", data);
+//				startActivity(intent);
+//				
+//			}
+//		});
+		
+		// 返回数据给上一个活动（活动一与活动二之间）
+		Button button_for_result = (Button) findViewById(R.id.button_for_result);
+		
+		button_for_result.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			
+				Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+				
+				//使用startActivityForResult方法启动活动二
+				// 第一个参数为intent
+				// 第二个参数为请求码，用于在之后的回调中判断数据的来源
+				// 请求码只要是一个唯一值就可以了
+				startActivityForResult(intent, 1);
+			
+			}
+		});
 		
 		// 添加销毁活动的按钮
 		Button button_finish = (Button) findViewById(R.id.button_finish);
@@ -141,4 +180,30 @@ public class FirstActivity extends Activity {
 
 		// return super.onOptionsItemSelected(item);
 	}
+	
+	
+	// 活动二销毁之后回调到上一个活动(即：活动一)的onActivityResult()方法
+	// 重写方法用于完成返回数据给上一个活动（活动一与活动二之间），来得到活动二传递的数据
+	// onActivityResult()方法共有三个参数
+	// 参数一（即：requestCode）: 我们在启动活动时传入的请求码
+	// 参数二（即：resultCode） : 我们在返回数据时传入的处理结果
+	// 参数三（即：data） : 携带者返回数据的intent
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+//		super.onActivityResult(requestCode, resultCode, data);
+		
+		switch (requestCode) {
+		case 1:
+			if (resultCode == RESULT_OK){
+				String returnedData = data.getStringExtra("data_return");
+				Log.d("FirstActivity_data", returnedData);
+			}
+			break;
+
+		default:
+
+		}
+	}
+	
 }

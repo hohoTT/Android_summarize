@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
@@ -34,6 +35,29 @@ public class SecondActivity extends Activity {
 			}
 		});
 		
+		// 以下为SecondActivity从FirstActivity中获取数据
+//		Intent intent = getIntent();
+//		String data = intent.getStringExtra("extra_data");
+//		Log.d("SecondActivity_data", data);
+		
+		
+		// 以下为对应活动一中的startActivityForResult()方法对应的点击事件
+		// 用于完成返回数据给上一个活动（活动一与活动二之间）
+		Button button_2 = (Button) findViewById(R.id.button_2);
+		button_2.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			
+				Intent intent = new Intent();
+				intent.putExtra("data_return", "Hello FirstActivity");
+				setResult(RESULT_OK, intent);
+				finish();
+				
+			}
+		});
+		
 		// 添加销毁当前活动，返回FirstActivity
 		Button button_back_first = (Button) findViewById(R.id.button_back_first);
 
@@ -45,6 +69,20 @@ public class SecondActivity extends Activity {
 				finish();
 			}
 		});
+		
+	}
+	
+	// 重写onBackPressed()方法,实现不用点击Button2按钮也可将消息传回活动一
+
+	@Override
+	public void onBackPressed() {
+		// TODO Auto-generated method stub
+//		super.onBackPressed();
+
+		Intent intent = new Intent();
+		intent.putExtra("data_return", "Hello FirstActivity");
+		setResult(RESULT_OK, intent);
+		finish();
 		
 	}
 	
