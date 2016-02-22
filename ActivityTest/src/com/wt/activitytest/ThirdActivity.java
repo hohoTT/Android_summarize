@@ -2,6 +2,7 @@ package com.wt.activitytest;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Window;
 
 public class ThirdActivity extends Activity {
@@ -10,6 +11,9 @@ public class ThirdActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+		Log.d("ThirdActivity", "Task id is " + getTaskId());
+		
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.third_layout);
 	}

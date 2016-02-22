@@ -3,11 +3,19 @@
 <fullyQualifiedTypeName name="com.wt.activitytest.R.menu"/>
 <fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.R.id"/>
-<fullyQualifiedTypeName name="android.view.Window"/>
-<fullyQualifiedTypeName name="android.widget.Button"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.R.layout"/>
+<fullyQualifiedTypeName name="com.wt.activitytest.BuildConfig"/>
+<fullyQualifiedTypeName name="android.net.Uri"/>
+<fullyQualifiedTypeName name="android.view.Window"/>
+<fullyQualifiedTypeName name="com.example.activitylifecycletest.R.layout"/>
+<fullyQualifiedTypeName name="android.widget.Button"/>
+<fullyQualifiedTypeName name="com.example.activitylifecycletest.MainActivity"/>
+<fullyQualifiedTypeName name="com.example.activitylifecycletest.NormalActivity"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
+<fullyQualifiedTypeName name="com.example.activitylifecycletest.DialogActivity"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.FirstActivity"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.SecondActivity"/>
+<fullyQualifiedTypeName name="com.wt.activitytest.ThirdActivity"/>
 </qualifiedTypeNameHistroy>

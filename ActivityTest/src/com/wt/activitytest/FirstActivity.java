@@ -19,6 +19,10 @@ public class FirstActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		
+//		Log.d("FirstActivity", this.toString());
+		Log.d("FirstActivity", "Task id is " + getTaskId());
+		
 		// 用于除去活动中的标题栏
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.first_layout);
@@ -26,13 +30,47 @@ public class FirstActivity extends Activity {
 		Button button1 = (Button) findViewById(R.id.button_1);
 
 		// 点击按钮 button1 显示 Toast，为按钮注册点击事件
+//		button1.setOnClickListener(new OnClickListener() {
+//
+//			@Override
+//			public void onClick(View v) {
+//				// TODO Auto-generated method stub
+//				Toast.makeText(FirstActivity.this, "You clicked Button 1",
+//						Toast.LENGTH_SHORT).show();
+//			}
+//		});
+		
+		// 通过button1的点击事件研究活动的启动模式
+		// 模式在AndroidManifest.xml文件活动中的android:launchMode里进行设置
+		
+		// 一、standard模式（为活动自动使用的模式，即默认使用的模式）
+		// 每点击一次按钮就会创建出来一个FirstActivity的实例
+		// standard该模式就是，系统不会在乎这个活动是否已经在返回栈中存在
+		// 每次启动都会创建该活动的一个新的实例
+		
+		// 二、singleTop模式
+		// 当活动已经处于栈顶的位置，则不会创建新的活动，此时只有该活动的一个实例
+		// 如果活动不是处于栈顶的位置，则依旧会创建新的活动
+		// 该模式可以很好的解决重复创建栈顶活动的问题
+		
+		// 三、singleTask模式
+		// 让某个活动在整个的应用程序中的上下文只存在一个实例
+		
+		// 四、singleInstance模式
+		// 不管是哪一个应用程序来访问这个活动，都共用一个返回栈
 		button1.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Toast.makeText(FirstActivity.this, "You clicked Button 1",
-						Toast.LENGTH_SHORT).show();
+				
+				// 一、standard模式（为活动自动使用的模式，即默认使用的模式）
+//				Intent intent = new Intent(FirstActivity.this, FirstActivity.class);
+				
+				Intent intent = new Intent(FirstActivity.this, SecondActivity.class);
+				
+				startActivity(intent);
+				
 			}
 		});
 
@@ -204,6 +242,20 @@ public class FirstActivity extends Activity {
 		default:
 
 		}
+	}
+	
+	@Override
+	protected void onRestart() {
+		// TODO Auto-generated method stub
+		super.onRestart();
+		Log.d("FirstActivity", "onRestart");
+	}
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		Log.d("FirstActivity", "onDestroy");
 	}
 	
 }
