@@ -99,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
     }
     
     // onSaveInstanceState()方法保证一定在活动被回收之前调用
-    // 通过onSaveInstanceState()这个方法可以解决活动被回收时临时数据得不到保存的问题
+    // 通过这个方法可以解决活动被回收时临时数据得不到保存的问题
     @Override
     protected void onSaveInstanceState(Bundle outState) {
     	// TODO Auto-generated method stub
