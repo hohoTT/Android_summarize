@@ -22,12 +22,6 @@ public class MainActivity extends ActionBarActivity {
         Log.d(TAG, "onCreate");
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
-        
-        // 取出之前保存的数据
-        if(savedInstanceState != null){
-        	String tempData = savedInstanceState.getString("data_key");
-        	Log.d(TAG, tempData);
-        }
     
         Button startNormalActivity = (Button) findViewById(R.id.start_normal_activity);
         
@@ -98,14 +92,12 @@ public class MainActivity extends ActionBarActivity {
     	Log.d(TAG, "onRestart");
     }
     
-    // onSaveInstanceState()方法保证一定在活动被回收之前调用
-    // 通过这个方法可以解决活动被回收时临时数据得不到保存的问题
+    
     @Override
     protected void onSaveInstanceState(Bundle outState) {
     	// TODO Auto-generated method stub
     	super.onSaveInstanceState(outState);
-    	String tempData = "Something you just typed";
-    	outState.putString("data_key", tempData);
+    	String tempData = "Something you ";
     }
     
 }

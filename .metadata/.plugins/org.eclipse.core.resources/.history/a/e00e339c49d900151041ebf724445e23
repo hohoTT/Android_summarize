@@ -23,7 +23,6 @@ public class MainActivity extends ActionBarActivity {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_main);
         
-        // 取出之前保存的数据
         if(savedInstanceState != null){
         	String tempData = savedInstanceState.getString("data_key");
         	Log.d(TAG, tempData);
