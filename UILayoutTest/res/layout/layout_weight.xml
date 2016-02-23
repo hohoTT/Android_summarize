@@ -1,0 +1,49 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        
+        <TextView 
+	        android:id="@+id/input_message1"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="Type something1" />
+    
+    	<Button 
+	        android:id="@+id/send1"
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+	        android:text="Send1" />
+        
+    </LinearLayout>
+    
+    <LinearLayout 
+        android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal">
+        
+        <TextView 
+	        android:id="@+id/input_message2"
+	        android:layout_width="0dp"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:hint="Type something2" />
+	    
+	    <Button 
+	        android:id="@+id/send2"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+	        android:text="Send2" />
+        
+    </LinearLayout>
+    
+    
+    
+</LinearLayout>
