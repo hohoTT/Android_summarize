@@ -13,7 +13,13 @@ public class MainActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
 //        setContentView(R.layout.activity_main);
 //        setContentView(R.layout.layout_gravity);
-        setContentView(R.layout.layout_weight);
+//        setContentView(R.layout.layout_weight);
+        
+        // 相对布局相对于父布局进行的定位使用
+//        setContentView(R.layout.relative_layout_one);
+        
+        // 相对布局相对于控件进行的定位使用
+        setContentView(R.layout.relative_layout_two);
     }
 
 

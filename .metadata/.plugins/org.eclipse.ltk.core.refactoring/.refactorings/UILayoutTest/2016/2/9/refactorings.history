@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;UILayoutTest/res/layout/relative_layout.xml&apos; to &apos;relative_layout_one.xml&apos;" description="Rename resource &apos;relative_layout.xml&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="res/layout/relative_layout.xml" name="relative_layout_one.xml" stamp="1456229551908" updateReferences="true"/>
+</session>
