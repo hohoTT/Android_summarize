@@ -4,33 +4,86 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
 
+public class MainActivity extends ActionBarActivity implements OnClickListener {
+	
+	private boolean flag = true;
+	
+	private Button button_show_EditText;
+	private Button button_change_image;
+	private Button button;
+	private EditText editText;
+	private ImageView imageView;
+	private ProgressBar progressBar;
 
-public class MainActivity extends ActionBarActivity {
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+		button_show_EditText = (Button) findViewById(R.id.button_show_EditText);
+		button_show_EditText.setOnClickListener(this);
+		
+		button_change_image = (Button) findViewById(R.id.button_change_image);
+		button_change_image.setOnClickListener(this);
+		
+		button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(this);
+		
+		editText = (EditText) findViewById(R.id.edit_text);
+		
+		imageView = (ImageView) findViewById(R.id.image_view);
+		
+		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+	}
 
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.button_show_EditText:
+			// 此处编辑button_show_EditText按钮的点击事件
+			// 通过点击按钮来获取EditText中输入的内容
+			
+			String inputText = editText.getText().toString();
+			Toast.makeText(MainActivity.this, inputText, Toast.LENGTH_SHORT)
+					.show();
+			
+			break;
+			
+		case R.id.button_change_image:
+			// 通过点击button_change_image按钮来改变图片
+			// 使用if进行图片的切换
+			if(flag){
+				imageView.setImageResource(R.drawable.music);
+				flag = false;
+			}
+			else{
+				imageView.setImageResource(R.drawable.img);
+				flag = true;
+			}
+			break;
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+		case R.id.button:
+			
+			// 点击一下按钮让进度条消失，再点击一下按钮让按钮出现
+			if(progressBar.getVisibility() == View.GONE){
+				progressBar.setVisibility(View.VISIBLE);
+			}
+			else{
+				progressBar.setVisibility(View.GONE);
+			}
+			
+			break;
+		default:
+			break;
+		}
+	}
 }
