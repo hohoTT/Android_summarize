@@ -14,8 +14,16 @@ public class BaseActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		
 		// 获取活动的名字
-		
 		Log.d("BaseActivity", getClass().getSimpleName());
+		
+		ActivityCollector.addActivity(this);
+	}
+	
+	@Override
+	protected void onDestroy() {
+		// TODO Auto-generated method stub
+		super.onDestroy();
+		ActivityCollector.removeActivity(this);
 	}
 	
 }

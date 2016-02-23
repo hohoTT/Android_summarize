@@ -1,0 +1,18 @@
+package com.wt.activitytest;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import android.app.Activity;
+
+// 为随时随地退出程序创建的类
+
+public class ActivityCollector extends Activity {
+
+	public static List<Activity> activities = ArrayList<Activity>();
+	
+	public static void addActivity() {
+		
+	}
+	
+}

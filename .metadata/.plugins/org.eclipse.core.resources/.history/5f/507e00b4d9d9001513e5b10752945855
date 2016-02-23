@@ -1,0 +1,11 @@
+package com.wt.activitytest;
+
+import android.app.Activity;
+
+// 为随时随地退出程序
+
+public class ActivityCollector extends Activity {
+
+	
+	
+}
