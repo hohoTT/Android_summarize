@@ -124,18 +124,11 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			// dialog.show();
 
 			// ProgressDialog的使用
-			// progressDialog弹出一个对话框，能够屏蔽掉其他控件的交互能力
-			// progressDialog会在对话框中显示一个进度条
-			// 一般用于表示当前的操作比较耗时，让用户耐心的等待
+			// progressDialog弹出一个对话框，能够屏蔽掉其他的
 			ProgressDialog progressDialog = new ProgressDialog(
 					MainActivity.this);
 			progressDialog.setTitle("This is ProgressDialog");
 			progressDialog.setMessage("Loading...");
-			
-			// 如果此时填入的为false，则progressDialog是不能通过Back键取消掉的
-			// 这时你就一定要在代码中做好控制
-			// 当数据加载完成时必须要调用progressDialog的dismiss()方法来关闭对话框
-			// 否则progressDialog将会一直存在
 			progressDialog.setCancelable(true);
 			
 			progressDialog.show();

@@ -2,7 +2,6 @@ package com.example.uiwidgetest;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
@@ -95,53 +94,37 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			// AlertDialog可以在当前的界面弹出一个对话框
 			// 这个对话框是置顶于所有界面元素之上的
 			// 一般AlertDialog都是用于提示一些非常重要的内容或警告的信息
-			// AlertDialog.Builder dialog = new AlertDialog.Builder(
-			// MainActivity.this);
-			// dialog.setTitle("This is Dialog");
-			// dialog.setMessage("Something important");
-			// dialog.setCancelable(false);
-			//
-			// dialog.setPositiveButton("OK", new
-			// DialogInterface.OnClickListener() {
-			//
-			// @Override
-			// public void onClick(DialogInterface dialog, int which) {
-			// // TODO Auto-generated method stub
-			//
-			// }
-			// });
-			//
-			// dialog.setNegativeButton("Cancel", new
-			// DialogInterface.OnClickListener() {
-			//
-			// @Override
-			// public void onClick(DialogInterface dialog, int which) {
-			// // TODO Auto-generated method stub
-			//
-			// }
-			// });
-			//
-			// dialog.show();
-
-			// ProgressDialog的使用
-			// progressDialog弹出一个对话框，能够屏蔽掉其他控件的交互能力
-			// progressDialog会在对话框中显示一个进度条
-			// 一般用于表示当前的操作比较耗时，让用户耐心的等待
-			ProgressDialog progressDialog = new ProgressDialog(
-					MainActivity.this);
-			progressDialog.setTitle("This is ProgressDialog");
-			progressDialog.setMessage("Loading...");
+//			AlertDialog.Builder dialog = new AlertDialog.Builder(
+//					MainActivity.this);
+//			dialog.setTitle("This is Dialog");
+//			dialog.setMessage("Something important");
+//			dialog.setCancelable(false);
+//			
+//			dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+//				
+//				@Override
+//				public void onClick(DialogInterface dialog, int which) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//			});
+//			
+//			dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+//				
+//				@Override
+//				public void onClick(DialogInterface dialog, int which) {
+//					// TODO Auto-generated method stub
+//					
+//				}
+//			});
+//			
+//			dialog.show();
 			
-			// 如果此时填入的为false，则progressDialog是不能通过Back键取消掉的
-			// 这时你就一定要在代码中做好控制
-			// 当数据加载完成时必须要调用progressDialog的dismiss()方法来关闭对话框
-			// 否则progressDialog将会一直存在
-			progressDialog.setCancelable(true);
+			// 的使用
 			
-			progressDialog.show();
 			
 			break;
-
+			
 		default:
 			break;
 		}

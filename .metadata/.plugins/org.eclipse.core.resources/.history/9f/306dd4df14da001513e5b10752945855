@@ -134,8 +134,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			
 			// 如果此时填入的为false，则progressDialog是不能通过Back键取消掉的
 			// 这时你就一定要在代码中做好控制
-			// 当数据加载完成时必须要调用progressDialog的dismiss()方法来关闭对话框
-			// 否则progressDialog将会一直存在
+			// 当数据
 			progressDialog.setCancelable(true);
 			
 			progressDialog.show();
