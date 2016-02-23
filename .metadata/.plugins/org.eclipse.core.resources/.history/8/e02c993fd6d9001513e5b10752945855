@@ -10,7 +10,7 @@ import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.Button;
 
-public class SecondActivity extends BaseActivity {
+public class SecondActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {

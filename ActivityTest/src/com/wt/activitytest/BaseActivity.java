@@ -3,19 +3,19 @@ package com.wt.activitytest;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Window;
 
-public class ThirdActivity extends BaseActivity {
-	
+// 创建父类，知晓当前是哪一个活动
+
+public class BaseActivity extends Activity {
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		
-		Log.d("ThirdActivity", "Task id is " + getTaskId());
+		// 获取活动的名字
 		
-		requestWindowFeature(Window.FEATURE_NO_TITLE);
-		setContentView(R.layout.third_layout);
+		Log.d("BaseActivity", getClass().getSimpleName());
 	}
 	
 }

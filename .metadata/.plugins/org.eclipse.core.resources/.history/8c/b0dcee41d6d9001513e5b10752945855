@@ -5,7 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Window;
 
-public class ThirdActivity extends BaseActivity {
+public class ThirdActivity extends Activity {
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
