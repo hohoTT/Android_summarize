@@ -1,0 +1,7 @@
+package com.example.uilayouttest;
+
+import android.widget.LinearLayout;
+
+public class TiltleActivity extends LinearLayout {
+
+}

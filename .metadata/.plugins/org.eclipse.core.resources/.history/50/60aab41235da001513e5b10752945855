@@ -1,0 +1,22 @@
+package com.example.uilayouttest;
+
+import android.content.Context;
+import android.util.AttributeSet;
+import android.view.LayoutInflater;
+import android.widget.LinearLayout;
+
+public class TiltleActivity extends LinearLayout {
+
+	// 需要对标题栏布局进行动态加载
+	// 通过LayoutInflater.from(context).inflate(R.layout.title, this)方法
+	// 第一个参数是要加载的布局文件的id
+	// 第二个参数是给加载好的
+	public TiltleActivity(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		// TODO Auto-generated constructor stub
+		
+		LayoutInflater.from(context).inflate(R.layout.title, this);
+		
+	}
+
+}
