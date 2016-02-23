@@ -24,10 +24,10 @@ public class MainActivity extends ActionBarActivity {
 //        setContentView(R.layout.relative_layout_two);
         
         // FrameLayout布局的使用，在介绍碎片的时候会用到，一般用的很少
-//        setContentView(R.layout.frame_layout);
+        setContentView(R.layout.frame_layout);
         
         // TableLayout布局的使用，使用表格的方式来排列控件
-        setContentView(R.layout.table_layout);
+        
     }
 
 
