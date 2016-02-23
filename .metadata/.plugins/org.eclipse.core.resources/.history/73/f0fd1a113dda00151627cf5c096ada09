@@ -1,0 +1,34 @@
+package com.example.listviewtext;
+
+import android.support.v7.app.ActionBarActivity;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+public class MainActivity extends ActionBarActivity {
+
+	// 新建数据（以水果为例）
+	private String[] data = { "apple", "banana", "lemen", "lime", "orange",
+			"pear", "blueberry", "taro", "persimmon", "avocado", "apricot",
+			"strawberry" };
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		// 借助适配器来将数组中的数据传递到listview中
+		// ArrayAdapter通过泛型的方式来指定要适配的数据类型，共有三个参数
+		// 第一个参数：指定传入的当前上下文
+		// 第二个参数：ListView子项布局的id，这里的是一个Android
+		// 第三个参数：传入要适配的数据，即之前预先设置的data水果数据
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+				MainActivity.this, android.R.layout.simple_list_item_1, data);
+
+		ListView listView = (ListView) findViewById(R.id.list_view);
+		
+		listView.setAdapter(adapter);
+	}
+}

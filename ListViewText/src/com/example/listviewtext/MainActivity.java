@@ -4,33 +4,34 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 
 public class MainActivity extends ActionBarActivity {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-    }
+	// 新建数据（以水果为例）
+	private String[] data = { "apple", "banana", "lemen", "lime", "orange",
+			"pear", "blueberry", "taro", "persimmon", "avocado", "apricot",
+			"strawberry" };
 
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
+		// 借助适配器来将数组中的数据传递到listview中
+		// ArrayAdapter通过泛型的方式来指定要适配的数据类型，共有三个参数
+		// 第一个参数：指定传入的当前上下文
+		// 第二个参数：ListView子项布局的id，这里的是一个Android内置的布局android.R.layout.simple_list_item_1
+		// 第三个参数：传入要适配的数据，即之前预先设置的data水果数据
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(
+				MainActivity.this, android.R.layout.simple_list_item_1, data);
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
+		ListView listView = (ListView) findViewById(R.id.list_view);
+		
+		// 将构建好的适配器对象传递进去
+		// 这样ListView和数据之间的关联就建立完成了
+		// 即可通过滚动的方式来查看屏幕外的数据（当数据较多的情况）
+		listView.setAdapter(adapter);
+	}
 }
