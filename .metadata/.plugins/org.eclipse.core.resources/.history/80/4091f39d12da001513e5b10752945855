@@ -2,7 +2,6 @@ package com.example.uiwidgetest;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.AlertDialog;
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -91,37 +90,10 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 			// progressBar.setProgress(progress);
 
 			// AlertDialog的使用
-			// AlertDialog可以在当前的界面弹出一个对话框
-			// 这个对话框是置顶于所有界面元素之上的
-			// 一般AlertDialog都是用于提示一些非常重要的内容或警告的信息
 			AlertDialog.Builder dialog = new AlertDialog.Builder(
 					MainActivity.this);
-			dialog.setTitle("This is Dialog");
-			dialog.setMessage("Something important");
-			dialog.setCancelable(false);
-			
-			dialog.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-				
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
-			
-			dialog.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-				
-				@Override
-				public void onClick(DialogInterface dialog, int which) {
-					// TODO Auto-generated method stub
-					
-				}
-			});
-			
-			dialog.show();
-			
+
 			break;
-			
 		default:
 			break;
 		}

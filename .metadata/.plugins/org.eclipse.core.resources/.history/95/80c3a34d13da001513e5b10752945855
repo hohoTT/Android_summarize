@@ -92,8 +92,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 
 			// AlertDialog的使用
 			// AlertDialog可以在当前的界面弹出一个对话框
-			// 这个对话框是置顶于所有界面元素之上的
-			// 一般AlertDialog都是用于提示一些非常重要的内容或警告的信息
+			// 这个对话框是置顶于所有的
 			AlertDialog.Builder dialog = new AlertDialog.Builder(
 					MainActivity.this);
 			dialog.setTitle("This is Dialog");
