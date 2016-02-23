@@ -11,21 +11,15 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        
-        // LinearLayout线性布局的使用
 //        setContentView(R.layout.activity_main);
 //        setContentView(R.layout.layout_gravity);
 //        setContentView(R.layout.layout_weight);
         
-        // RelativeLayout相对布局相对于父布局进行的定位使用
+        // 相对布局相对于父布局进行的定位使用
 //        setContentView(R.layout.relative_layout_one);
         
-        // RelativeLayout相对布局相对于控件进行的定位使用
-//        setContentView(R.layout.relative_layout_two);
-        
-        // FrameLayout布局的使用，在介绍碎片的时候用的，一般用的很少
-        setContentView(R.layout.frame_layout);
-        
+        // 相对布局相对于控件进行的定位使用
+        setContentView(R.layout.relative_layout_two);
     }
 
 

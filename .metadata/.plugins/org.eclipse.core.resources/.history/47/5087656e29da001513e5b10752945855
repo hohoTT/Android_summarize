@@ -21,10 +21,9 @@ public class MainActivity extends ActionBarActivity {
 //        setContentView(R.layout.relative_layout_one);
         
         // RelativeLayout相对布局相对于控件进行的定位使用
-//        setContentView(R.layout.relative_layout_two);
+        setContentView(R.layout.relative_layout_two);
         
-        // FrameLayout布局的使用，在介绍碎片的时候用的，一般用的很少
-        setContentView(R.layout.frame_layout);
+        // FrameLayout布局的使用
         
     }
 
