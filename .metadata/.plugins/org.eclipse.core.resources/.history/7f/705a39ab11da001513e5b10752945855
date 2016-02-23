@@ -83,11 +83,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 //			}
 			
 			// 二、进度条为长条的样式
-			// 实现动态的更改进度条的进度
-			// 每点击一次该按钮则实现在原来的基础上动态的加10
-			int progress = progressBar.getProgress();
-			progress += 10;
-			progressBar.setProgress(progress);
+			
 			
 			break;
 		default:
