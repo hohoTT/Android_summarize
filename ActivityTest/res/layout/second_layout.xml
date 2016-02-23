@@ -21,5 +21,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="back_first_activity" />
+    
+    <Button
+        android:id="@+id/button_pass_third"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="pass_data_third" />
 
 </LinearLayout>

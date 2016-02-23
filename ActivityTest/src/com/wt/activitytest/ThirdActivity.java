@@ -1,6 +1,8 @@
 package com.wt.activitytest;
 
 import android.app.Activity;
+import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -34,6 +36,27 @@ public class ThirdActivity extends BaseActivity {
 			}
 		});
 		
+		// 获取数据
+		Intent intent = getIntent();
+		
+		String param1 = intent.getStringExtra("param1");
+		String param2 = intent.getStringExtra("param2");
+		
+		Log.d("ThirdActivity_data", param1);
+		Log.d("ThirdActivity_data", param2);
+		
+	}
+	
+	// 增加actionStart()方法，实现传递数据的功能
+	// 实现某一个活动（由context决定）传递数据到活动三中
+	public static void actionStart(Context context, String data1, String data2) {
+		
+		Intent intent = new Intent(context, ThirdActivity.class);
+		
+		intent.putExtra("param1", data1);
+		intent.putExtra("param2", data2);
+
+		context.startActivity(intent);
 	}
 		
 }

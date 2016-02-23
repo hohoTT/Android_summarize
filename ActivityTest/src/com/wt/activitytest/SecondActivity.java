@@ -88,6 +88,21 @@ public class SecondActivity extends BaseActivity {
 			}
 		});
 		
+		
+		// 调用ThirdActivity中的actionStart方法进行数据的传递
+		Button button_pass_third = (Button) findViewById(R.id.button_pass_third);
+		
+		button_pass_third.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+			
+				ThirdActivity.actionStart(SecondActivity.this, "data_one", "data_two");
+				
+			}
+		});
+		
 	}
 	
 	// 重写onBackPressed()方法,实现不用点击Button2按钮也可将消息传回活动一
