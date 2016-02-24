@@ -53,13 +53,13 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
 //		ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
 //		TextView fruitName = (TextView) view.findViewById(R.id.fruit_name);
 //		
-		viewHolder.fruitImage.setImageResource(fruit.getImageId());
-		viewHolder.fruitName.setText(fruit.getName());
+		fruitImage.setImageResource(fruit.getImageId());
+		fruitName.setText(fruit.getName());
 		
 		return view;
 	}
 	
-	// 新增ViewHolder内部类，用于对控件的实例进行缓存
+	// 新增ViewHolder类，用于对控件的实例进行缓存
 	class ViewHolder{
 		
 		ImageView fruitImage;

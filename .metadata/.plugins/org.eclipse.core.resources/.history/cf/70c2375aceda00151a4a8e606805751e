@@ -59,7 +59,7 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
 		return view;
 	}
 	
-	// 新增ViewHolder内部类，用于对控件的实例进行缓存
+	// 新增ViewHolder类，用于对控件的实例进行缓存
 	class ViewHolder{
 		
 		ImageView fruitImage;

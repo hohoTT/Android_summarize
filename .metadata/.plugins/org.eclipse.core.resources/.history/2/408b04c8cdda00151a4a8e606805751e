@@ -34,32 +34,22 @@ public class FruitAdapter extends ArrayAdapter<Fruit> {
 		
 		// 优化代码，利用convertView提高ListView的运行效率
 		View view;
-		ViewHolder viewHolder;
-		
+//		ViewHolder viewHolder;
 		if(convertView == null){
 			view = LayoutInflater.from(getContext()).inflate(resourceId, null);
-			
-			viewHolder = new ViewHolder();
-			viewHolder.fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
-			viewHolder.fruitName = (TextView) view.findViewById(R.id.fruit_name);
-		
-			view.setTag(viewHolder);
 		}
 		else{
 			view = convertView;
-			viewHolder = (ViewHolder) view.getTag();
 		}
+		ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
+		TextView fruitName = (TextView) view.findViewById(R.id.fruit_name);
 		
-//		ImageView fruitImage = (ImageView) view.findViewById(R.id.fruit_image);
-//		TextView fruitName = (TextView) view.findViewById(R.id.fruit_name);
-//		
-		viewHolder.fruitImage.setImageResource(fruit.getImageId());
-		viewHolder.fruitName.setText(fruit.getName());
+		fruitImage.setImageResource(fruit.getImageId());
+		fruitName.setText(fruit.getName());
 		
 		return view;
 	}
 	
-	// 新增ViewHolder内部类，用于对控件的实例进行缓存
 	class ViewHolder{
 		
 		ImageView fruitImage;
