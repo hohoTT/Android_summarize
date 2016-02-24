@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;UIBestPractice&apos;&#x0D;&#x0A;- Original project: &apos;UIBestPractice&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     messege_left.9.png&#x0D;&#x0A;     messege_left.png&#x0D;&#x0A;     messege_right.9.png&#x0D;&#x0A;     messege_right.png" description="Delete elements" element1="res/drawable-hdpi/messege_left.9.png" element2="res/drawable-hdpi/messege_right.png" element3="res/drawable-hdpi/messege_left.png" element4="res/drawable-hdpi/messege_right.9.png" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="4" stamp="1456312158368" subPackages="false" version="1.0"/>
+</session>
