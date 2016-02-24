@@ -68,7 +68,7 @@ public class MainActivity extends ActionBarActivity implements OnClickListener {
 				imageView.setImageResource(R.drawable.music);
 				flag = false;
 			} else {
-				imageView.setImageResource(R.drawable.img);
+				imageView.setImageResource(R.drawable.watermelon);
 				flag = true;
 			}
 			break;

@@ -1,0 +1,9 @@
+package com.example.listviewtext;
+
+public class Fruit {
+
+	private String name;
+	
+	
+	
+}

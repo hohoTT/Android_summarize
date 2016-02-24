@@ -1,0 +1,149 @@
+package com.example.uiwidgetest;
+
+import android.support.v7.app.ActionBarActivity;
+import android.app.AlertDialog;
+import android.app.ProgressDialog;
+import android.content.DialogInterface;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
+import android.widget.Toast;
+
+public class MainActivity extends ActionBarActivity implements OnClickListener {
+
+	private boolean flag = true;
+
+	private Button button_show_EditText;
+	private Button button_change_image;
+	private Button button;
+	private EditText editText;
+	private ImageView imageView;
+	private ProgressBar progressBar;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_main);
+
+		button_show_EditText = (Button) findViewById(R.id.button_show_EditText);
+		button_show_EditText.setOnClickListener(this);
+
+		button_change_image = (Button) findViewById(R.id.button_change_image);
+		button_change_image.setOnClickListener(this);
+
+		button = (Button) findViewById(R.id.button);
+		button.setOnClickListener(this);
+
+		editText = (EditText) findViewById(R.id.edit_text);
+
+		imageView = (ImageView) findViewById(R.id.image_view);
+
+		progressBar = (ProgressBar) findViewById(R.id.progress_bar);
+	}
+
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.button_show_EditText:
+			// 此处编辑button_show_EditText按钮的点击事件
+			// 通过点击按钮来获取EditText中输入的内容
+
+			String inputText = editText.getText().toString();
+			Toast.makeText(MainActivity.this, inputText, Toast.LENGTH_SHORT)
+					.show();
+
+			break;
+
+		case R.id.button_change_image:
+			// 通过点击button_change_image按钮来改变图片
+			// 使用if进行图片的切换
+			if (flag) {
+				imageView.setImageResource(R.drawable.music);
+				flag = false;
+			} else {
+				imageView.setImageResource(R.drawable.banana_pic);
+				flag = true;
+			}
+			break;
+
+		case R.id.button:
+
+			// 一、进度条为圆圈的样式
+			// 点击一下按钮让进度条消失，再点击一下按钮让按钮出现
+			// if(progressBar.getVisibility() == View.GONE){
+			// progressBar.setVisibility(View.VISIBLE);
+			// }
+			// else{
+			// progressBar.setVisibility(View.GONE);
+			// }
+
+			// 二、进度条为长条的样式
+			// 实现动态的更改进度条的进度
+			// 每点击一次该按钮则实现在原来的基础上动态的加10
+			// int progress = progressBar.getProgress();
+			// progress += 10;
+			// progressBar.setProgress(progress);
+
+			// AlertDialog的使用
+			// AlertDialog可以在当前的界面弹出一个对话框
+			// 这个对话框是置顶于所有界面元素之上的
+			// 一般AlertDialog都是用于提示一些非常重要的内容或警告的信息
+			// AlertDialog.Builder dialog = new AlertDialog.Builder(
+			// MainActivity.this);
+			// dialog.setTitle("This is Dialog");
+			// dialog.setMessage("Something important");
+			// dialog.setCancelable(false);
+			//
+			// dialog.setPositiveButton("OK", new
+			// DialogInterface.OnClickListener() {
+			//
+			// @Override
+			// public void onClick(DialogInterface dialog, int which) {
+			// // TODO Auto-generated method stub
+			//
+			// }
+			// });
+			//
+			// dialog.setNegativeButton("Cancel", new
+			// DialogInterface.OnClickListener() {
+			//
+			// @Override
+			// public void onClick(DialogInterface dialog, int which) {
+			// // TODO Auto-generated method stub
+			//
+			// }
+			// });
+			//
+			// dialog.show();
+
+			// ProgressDialog的使用
+			// progressDialog弹出一个对话框，能够屏蔽掉其他控件的交互能力
+			// progressDialog会在对话框中显示一个进度条
+			// 一般用于表示当前的操作比较耗时，让用户耐心的等待
+			ProgressDialog progressDialog = new ProgressDialog(
+					MainActivity.this);
+			progressDialog.setTitle("This is ProgressDialog");
+			progressDialog.setMessage("Loading...");
+			
+			// 如果此时填入的为false，则progressDialog是不能通过Back键取消掉的
+			// 这时你就一定要在代码中做好控制
+			// 当数据加载完成时必须要调用progressDialog的dismiss()方法来关闭对话框
+			// 否则progressDialog将会一直存在
+			progressDialog.setCancelable(true);
+			
+			progressDialog.show();
+			
+			break;
+
+		default:
+			break;
+		}
+	}
+}
