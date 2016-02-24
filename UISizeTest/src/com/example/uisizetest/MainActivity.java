@@ -2,6 +2,7 @@ package com.example.uisizetest;
 
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -12,6 +13,16 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
+        // 获取当前屏幕的密度值
+        // 注意：指定一个固定值的时候使用dp来作为单位，指定文字的时候使用sp来作为单位
+        float xdpi = getResources().getDisplayMetrics().xdpi;
+        float ydpi = getResources().getDisplayMetrics().ydpi;
+        
+        // 打印当前屏幕的密度值
+        Log.d("x_y_dpi", "xdpi is " + xdpi);
+        Log.d("x_y_dpi", "ydpi is " + ydpi);
+        
     }
 
 
