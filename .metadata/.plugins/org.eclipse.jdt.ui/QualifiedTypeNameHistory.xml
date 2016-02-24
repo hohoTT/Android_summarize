@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.wt.activitytest.R.menu"/>
-<fullyQualifiedTypeName name="android.widget.Toast"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.R.id"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.R.layout"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.BuildConfig"/>
@@ -13,22 +12,31 @@
 <fullyQualifiedTypeName name="com.example.activitylifecycletest.NormalActivity"/>
 <fullyQualifiedTypeName name="android.view.View.OnClickListener"/>
 <fullyQualifiedTypeName name="com.example.activitylifecycletest.DialogActivity"/>
-<fullyQualifiedTypeName name="android.util.Log"/>
 <fullyQualifiedTypeName name="android.content.Intent"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.FirstActivity"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.SecondActivity"/>
 <fullyQualifiedTypeName name="com.wt.activitytest.ThirdActivity"/>
 <fullyQualifiedTypeName name="android.widget.ArrayAdapter"/>
-<fullyQualifiedTypeName name="com.example.listviewtext.MainActivity"/>
 <fullyQualifiedTypeName name="android.R"/>
 <fullyQualifiedTypeName name="android.R.layout"/>
 <fullyQualifiedTypeName name="android.widget.ListView"/>
 <fullyQualifiedTypeName name="com.example.listviewtext.R.id"/>
-<fullyQualifiedTypeName name="java.util.List"/>
-<fullyQualifiedTypeName name="com.example.listviewtext.Fruit"/>
 <fullyQualifiedTypeName name="android.view.View"/>
 <fullyQualifiedTypeName name="android.view.LayoutInflater"/>
-<fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.webkit.WebView.FindListener"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="com.example.uiwidgetest.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.R.drawable"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.FruitAdapter"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.R.layout"/>
+<fullyQualifiedTypeName name="java.lang.Class"/>
+<fullyQualifiedTypeName name="android.widget.ImageView"/>
 <fullyQualifiedTypeName name="android.widget.TextView"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.FruitAdapter.ViewHolder"/>
+<fullyQualifiedTypeName name="android.widget.AdapterView.OnItemClickListener"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.Fruit"/>
+<fullyQualifiedTypeName name="com.example.listviewtext.MainActivity"/>
+<fullyQualifiedTypeName name="android.widget.Toast"/>
+<fullyQualifiedTypeName name="android.util.Log"/>
 </qualifiedTypeNameHistroy>
