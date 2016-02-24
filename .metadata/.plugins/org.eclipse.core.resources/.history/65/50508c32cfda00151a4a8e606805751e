@@ -7,12 +7,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.Toast;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -47,23 +43,9 @@ public class MainActivity extends ActionBarActivity {
 		// 将构建好的适配器对象传递进去
 		// 这样ListView和数据之间的关联就建立完成了
 		// 即可通过滚动的方式来查看屏幕外的数据（当数据较多的情况）
-		listView.setAdapter(adapter);
-
-		// 为ListView添加点击事件,点击每一个子项显示该子项水果的名字
-		listView.setOnItemClickListener(new OnItemClickListener() {
-
-			@Override
-			public void onItemClick(AdapterView<?> parent, View view,
-					int position, long id) {
-				// TODO Auto-generated method stub
-
-				Fruit fruit = fruitList.get(position);
-				Toast.makeText(MainActivity.this, fruit.getName(),
-						Toast.LENGTH_SHORT).show();
-
-			}
-		});
-
+		 listView.setAdapter(adapter);
+		 
+		 
 	}
 
 	private void initFruits() {
@@ -72,25 +54,25 @@ public class MainActivity extends ActionBarActivity {
 
 		Fruit banana = new Fruit("Banana", R.drawable.banana);
 		fruitList.add(banana);
-
+		
 		Fruit blueberries = new Fruit("Blueberries", R.drawable.blueberries);
 		fruitList.add(blueberries);
-
+		
 		Fruit cherries = new Fruit("Cherries", R.drawable.cherries);
 		fruitList.add(cherries);
-
+		
 		Fruit lemon = new Fruit("Lemon", R.drawable.lemon);
 		fruitList.add(lemon);
-
+		
 		Fruit mango = new Fruit("Mango", R.drawable.mango);
 		fruitList.add(mango);
-
+		
 		Fruit orange = new Fruit("Orange", R.drawable.orange);
 		fruitList.add(orange);
-
+		
 		Fruit strawberry = new Fruit("Strawberry", R.drawable.strawberry);
 		fruitList.add(strawberry);
-
+		
 		Fruit watermelon = new Fruit("Watermelon", R.drawable.watermelon);
 		fruitList.add(watermelon);
 	}
