@@ -10005,3 +10005,6 @@ java.lang.NoSuchMethodError: java.lang.System.arraycopy([CI[CII)V
 
 !ENTRY com.android.ide.eclipse.adt 4 0 2016-02-24 16:45:31.429
 !MESSAGE Failed to load properties file for project 'UISizeTest'
+
+!ENTRY com.android.ide.eclipse.adt 4 0 2016-02-24 17:50:22.277
+!MESSAGE Failed to load properties file for project 'UIBest'
