@@ -11,3 +11,4 @@
   2. 更改上述的第一个问题之后每个工程中还会出现 Unable to resolve target 'android-20'的错误
      解决的办法如下：
      Left click project->Build Path->Configure build path...-> Android-> Project Build Target
+     ![](https://github.com/hohoTT/Android_summarize/blob/master/image/describe/question_two.png)
