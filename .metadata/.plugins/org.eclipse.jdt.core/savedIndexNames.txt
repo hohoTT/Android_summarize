@@ -1,17 +1,11 @@
-INDEX VERSION 1.126+F:\Android_summarize\.metadata\.plugins\org.eclipse.jdt.core
-3099558869.index
-3565176671.index
-4272961691.index
-727533220.index
-553213162.index
-1284074322.index
-1386207918.index
-3071915715.index
-1405756408.index
+INDEX VERSION 1.126+C:\Users\Administrator\Desktop\WT\Android_summarize\.metadata\.plugins\org.eclipse.jdt.core
 2858514247.index
-3619169236.index
-2589119059.index
-2460400326.index
-162666637.index
+727533220.index
+1405756408.index
+3710608140.index
+553213162.index
 383037474.index
-3613314816.index
+2460400326.index
+1284074322.index
+3036936467.index
+2589119059.index
