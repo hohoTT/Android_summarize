@@ -13,3 +13,4 @@
      解决的办法如下：
      Left click project->Build Path->Configure build path...-> Android-> Project Build Target
      ![](https://github.com/hohoTT/Android_summarize/blob/master/image/describe/question_two.png)
+
